@@ -1,0 +1,9 @@
+SELECT C.FirstName, C.LastName, COUNT(O.OrderID) AS NumberOfOrders
+FROM Customers C
+JOIN Reservations R ON C.CustomerID = R.CustomerID
+JOIN Orders O ON R.ReservationID = O.ReservationID
+WHERE MONTH(R.ReservationDate) = MONTH(CURDATE()) - 1
+  AND YEAR(R.ReservationDate) = YEAR(CURDATE())
+GROUP BY C.CustomerID
+ORDER BY NumberOfOrders DESC
+LIMIT 1;
