@@ -1,4 +1,4 @@
-SQL Snippets and Examples
+SQL Snippets and Examples:
 
 This repository provides a collection of SQL queries and examples for various database manipulations. It serves as a reference and a starting point for projects.
 
